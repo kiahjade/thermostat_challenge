@@ -12,8 +12,8 @@ describe ('thermostat', function() {
   });
 
   it ('allows temperature to be increased', function() {
-    thermostat.up(10);
-    expect(thermostat.currentTemperature()).toEqual(30);
+    thermostat.up(2);
+    expect(thermostat.currentTemperature()).toEqual(22);
   });
 
   it ('allows temperature to be decreased', function() {
@@ -33,5 +33,16 @@ describe ('thermostat', function() {
   it('can switch power saving mode off', function() {
   thermostat.turnPowerSavingModeOff();
   expect(thermostat.isPowerSavingModeOn()).toBe(false);
+  });
+
+  it ('has a max temp of 25 when PSM on', function() {
+    thermostat.up(10);
+    expect(thermostat.currentTemperature()).toEqual(25);
+  });
+
+  it ('has a max temp of 35 when PSM off', function() {
+    thermostat.turnPowerSavingModeOff()
+    thermostat.up(10);
+    expect(thermostat.currentTemperature()).toEqual(30);
   });
 });
