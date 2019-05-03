@@ -37,5 +37,13 @@ $( document ).ready(function() {
     $('#powersaving-off').on('click', function() {
     thermostat.turnPowerSavingModeOff();
     updateTemperature();
+    });
+
+    $(document).ready(function(){
+    $.get("http://api.openweathermap.org/data/2.5/weather?id=2643741&appid=80c36965c94ead32fb40642a438e024c", function(weatherResponse){
+      city = weatherResponse.name;
+      forecast = weatherResponse.weather[0].main;
+      $('#weather').text(`The current weather forecast for ${city} is ${forecast}`);
     })
+    });
 });
