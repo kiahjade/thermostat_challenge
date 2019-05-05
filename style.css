@@ -1,5 +1,31 @@
+.centertext {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.h1 {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.img {
+  /* padding-top: 50px; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+  height: 50px;
+  width: 50px;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid black;
+  padding: 10px;
+}
 .low-usage {
-  color: green;
+  color: rgb(28, 184, 65);
 }
 
 .medium-usage {
@@ -7,5 +33,32 @@
 }
 
 .high-usage {
-  color: red;
+  color: rgb(202, 60, 60);
+}
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-success {
+    border-radius: 4px;
+    background: rgb(28, 184, 65); /* this is a green */
+}
+
+.button-error {
+    border-radius: 4px;
+    background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.button-warning {
+    background: rgb(223, 117, 20); /* this is an orange */
+}
+
+.button-secondary {
+    background: rgb(66, 184, 221); /* this is a light blue */
 }

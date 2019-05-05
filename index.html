@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Thermostat</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="interface.js"></script>
   </head>
   <body>
+    <div class="center">
       <section>
-      <h1 id="temperature"></h1>
-      <h2> power saving mode is <span id="power-saving-status"></span></h2>
-      <h3><span id="weather"></span></h3>
-      <p>
-        <button id="temp-up">+</button>
-        <button id="temp-down">-</button>
-        <button id="temp-reset">reset</button>
-        <button id="powersaving-on">PSM on</button>
-        <button id="powersaving-off">PSM off</button>
-      </p>
+        <img class="img" src="thermostat.svg"></img>
+      <h1 class="h1" id="temperature"></h1>
+      <h2 class="centertext"> Power saving mode is <span id="power-saving-status"></span></h2>
+      <h3 class="centertext"><span id="weather"></span></h3>
+      <div class="centertext">
+        <p>
+          <button class="button-error pure-button" id="temp-up">+</button>
+          <button class="button-success pure-button" id="temp-down">-</button>
+          <button class="pure-button" id="temp-reset">reset</button>
+          <button class="pure-button pure-button-active" id="powersaving-on">PSM on</button>
+          <button class="pure-button pure-button-active" id="powersaving-off">PSM off</button>
+        </p>
+      </div>
     </section>
+    </div>
     <script src="src/thermostat.js"></script>
   </body>
 </html>
