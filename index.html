@@ -8,10 +8,21 @@
     <script src="interface.js"></script>
   </head>
   <body>
-    <div class="center">
-      <section>
-        <img class="img" src="thermostat.svg"></img>
-      <h1 class="h1" id="temperature"></h1>
+    <!-- Image and text -->
+<nav class="navbar navbar-light bg-light nav_header">
+  <a class="navbar-brand" href="#">
+    <img src="thermostat.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+    Thermostat
+  </a>
+</nav>
+    <div class="container">
+      <section class="row">
+        <div class="col-12">
+          <img class="img" src="thermostat.svg"></img>
+          <h1 class="h1" id="temperature"></h1>
+        </div>
+      </section>
+
       <h2 class="centertext"> Power saving mode is <span id="power-saving-status"></span></h2>
       <h3 class="centertext"><span id="weather"></span></h3>
       <div class="centertext">
